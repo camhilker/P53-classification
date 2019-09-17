@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Active or Inactive</title>
+  <style>
+  body{
+    color: #eaf0ce;
+    font-family: sans-serif;
+    background-color: #0d0221;
+  }
+  .button {
+    background-color: #fcf7f8;
+    border: none;
+    color: #2f6690;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #a31621;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #a31621;
+    width: 300px;
+    margin: auto;
+    background-color: #8dbbdf;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+/* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2><font color=#2f6690>Here is what p53 looks like as an amino acid chain:</font></h2>
+  <p>meepqsdpsvepplsqetfsdlwkllpennvlsplpsqamddlmlspddieqwftedpgpdeaprmpeaaprvapapaaptpaapapapswplsssvpsqktyqgsygfrlgflhsgta
+
+  <!-- 123, active-->
+  <b><font color=#a31621>k</font></b>
+  svtctyspalnkmfcqlaktcpvqlwvdstp
+
+  <!-- 152, active-->
+  <b><font color=#a31621>p</font></b>
+  pgtrvramaiykqsqhmtevvr
+
+  <!-- 175 inactive-->
+  <b><font color=#a31621>r</font></b>
+  cph
+
+  <!-- 179 inactive-->
+  <b><font color=#a31621>h</font></b>
+  ercsdsdglappqhlirvegnlrveylddrntfrhsvvvpyeppevgsdcttihyvegnl
+  
+  <!-- 235, active-->
+  <b><font color=#a31621>n</font></b>
+  ymc
+  
+  <!-- 239-240, active-->
+  <b><font color=#a31621>ns</font></b>
+  scmg
+
+  <!-- 245, inactive-->
+  <b><font color=#a31621>g</font></b>
+  mn
+
+  <!-- 248, inactive-->
+  <b><font color=#a31621>r</font></b>
+  rpiltiitledssgnllgrnsfev
+
+  <!-- 273, inactive -->
+  <b><font color=#a31621>h</font></b>
+  vcacpgrdrrteeenlrkkgephhelppgstkralsnntssspqpkkkpldgeyftlqirgrerfemfrelnealelkdaqagkepggsrahsshlkskkgqstsrhkklmfktegpdsd
+  <p>
+  <h2><font color=#2f6690>Mutate the chain below to see if it will lose it's function and become inactive</font></h2>
+
+  <form action="/predict_recipe/" method="post">
+
+    <div class="animal-card" align="center">
+
+    <div class="row">
+
+      <div class="column">
+
+      <font color=#a31621>position 123:</font>
+      <br>
+        <input type="radio" name='c59' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c59' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 152:</font>
+      <br>
+        <input type="radio" name='c68' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c68' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 175:</font>
+      <br>
+        <input type="radio" name='c171' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c171' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 179:</font>
+      <br>
+        <input type="radio" name='c1' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c1' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 235:</font>
+      <br>
+        <input type="radio" name='c151' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c151' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      </div>
+
+      <div class="column">
+
+      <font color=#a31621>position 239:</font>
+      <br>
+        <input type="radio" name='c128' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c128' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 240:</font>
+      <br>
+        <input type="radio" name='c39' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c39' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 245:</font>
+      <br>
+        <input type="radio" name='c135' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c135' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 248:</font>
+      <br>
+        <input type="radio" name='c21' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c21' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      <font color=#a31621>position 273:</font>
+      <br>
+        <input type="radio" name='c160' value=0 checked="checked"> Normal<br>
+        <input type="radio" name='c160' value=1><font color=#bece76> Mutant</font><br>
+      <br>
+
+      </div>
+
+    </div>
+
+    </div>
+
+  <br>
+
+  <button type="submit" class="button">
+    Will p53 be active or inactive?
+  </button>
+  </form>
+
+  {% if message %}
+  <h1><font color=#2f6690>{{message}}</font></h1>
+  {% endif %}
+
+</body>
+</html>
